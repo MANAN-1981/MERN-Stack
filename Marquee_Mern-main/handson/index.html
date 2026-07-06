@@ -47,3 +47,90 @@
 </body>
 
 </html>
+
+
+<!-- 
+git log :  TO log all the commit with hash and editor
+git log --oneline
+
+git diff allows you to view changes in your repository, showing differences between your working directory, staging area, and commits.
+
+# Changes in the working tree since your last commit
+$ git diff HEAD
+
+# Comparing branches "topic" and "master"
+$ git diff topic master
+
+
+$ git push --force origin branch_name
+
+git push -u origin new-branch
+
+git push -u origin --all
+
+
+
+git tag tag_name hashCode(like v1.0.0)
+
+git tag (to list down all tags)
+
+git show v1.0.0
+
+(to check details)
+
+to create
+
+git tag -a v2.0.1 -m "Message for tag"
+
+-a "Details of the author OR message 
+
+
+
+git push origin <tag_name>
+
+
+git push origin --tags // TO push all the tags
+
+
+
+
+
+
+
+A lightweight tag in Git is essentially a simple pointer to a specific commit, without storing extra metadata like the tagger’s name, date, or message. It’s useful for quick, internal markers rather than public releases.
+
+Steps to Create a Lightweight Tag
+
+Navigate to your repository
+
+cd /path/to/your/repo
+Copy
+Create the lightweight tag Simply run:
+
+git tag <tagname>
+
+Tag a specific commit If you want to tag an older commit:
+
+git tag <tagname> <commit-hash>
+
+Verify the tag List all tags:
+
+git tag
+
+Pushing Lightweight Tags to Remote
+
+By default, tags are not pushed with git push. You must explicitly push them:
+
+Push a single tag:
+
+git push origin <tagname>
+Copy
+Push all tags:
+
+git push origin --tags
+Copy
+Deleting Lightweight Tags
+
+Delete locally:
+
+git tag -d <tagname> -->

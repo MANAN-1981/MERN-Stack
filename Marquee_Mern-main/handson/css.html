@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to CSS</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      #heading {
+        color: blueviolet;
+        background-color: antiquewhite;
+      }
+
+      .formatting {
+        background-color: antiquewhite;
+        font-family: cursive;
+        color: aqua;
+      }
+
+      ul li {
+        color: black;
+        background-color: azure;
+      }
+
+      section > p {
+        color: red;
+      }
+
+      div > p {
+        color: blue;
+      }
+
+      input[placeholder] {
+        background-color: blue;
+      }
+
+      input[type="password"][placeholder] {
+        background-color: red;
+      }
+
+      h2[class] {
+        color: rgb(247, 94, 12);
+      }
+      a:hover {
+        color: red;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 class="">Heading Level 2</h2>
+
+    <h3 style="color: purple">Types of CSS :</h3>
+
+    <p class="formatting">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+      cupiditate consequatur ut!
+    </p>
+
+    <ul class="formatting">
+      <li>Inline CSS</li>
+
+      <li>Internal CSS</li>
+
+      <li>External CSS</li>
+    </ul>
+
+    <br />
+
+    <a href="#" id="link">Click here</a>
+
+    <hr />
+
+    <section>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non
+          ad molestiae sit temporibus incidunt esse. Soluta iusto commodi natus
+          at.
+        </p>
+      </div>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+        perspiciatis quos assumenda!
+      </p>
+
+      <div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
+          sint, mollitia dolorum a, assumenda blanditiis neque possimus nisi
+          officiis optio ipsum.
+        </p>
+      </div>
+    </section>
+
+    <hr />
+
+    <form action="">
+      <label for="name">Username:</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+
+      <br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Password" />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
