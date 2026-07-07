@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Presentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-box">
+            <h1>Box Model</h1>
+        </div>
+
+        <div class="info-box">
+            <p>Every element on the page has its own box, which can be styled using CSS.</p>
+        </div>
+
+        <div class="info-box">
+            <p>From the inside out:</p>
+        </div>
+
+        <ul class="list-container">
+            <li><span class="highlight">content</span></li>
+            <li><span class="highlight">padding</span></li>
+            <li><span class="highlight">border</span></li>
+            <li><span class="highlight">margin</span></li>
+        </ul>
+
+        <h2 class="sub-heading">Background</h2>
+
+        <div class="info-box">
+            <p>Keep in mind that a <span class="bordered-word">background</span> will cover the content and the padding.</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+   <style> 
+    
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+.header-box {
+    background-color: #f27c6d;
+    border: 3px solid #000000;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+}
+
+.header-box h1 {
+    /* font-size: 38px; */
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.info-box {
+    background-color: #add8e6; 
+    border: 10px solid #00008b; 
+    padding: 18px 20px;
+    margin-bottom: 18px;
+}
+
+.info-box p {
+    font-size: 18px;
+    color: #333333;
+}
+
+.list-container {
+    list-style-position: inside; 
+    margin-bottom: 30px;
+}
+
+.list-container li {
+    font-size: 18px;
+    color: #cc00cc; 
+    background-color: #ffff00; 
+    padding: 6px 15px;
+    margin-bottom: 6px;
+    text-align: left; 
+}
+
+
+.sub-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.bordered-word {
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    padding: 8px 15px;
+    margin: 0 5px;
+    display: inline-block;
+    font-size: 16px;
+    color: #333333;
+}
+    
+    
+    
+    </style>
+    
+    
+    
+    
+    
+
+</body>
+</html>
