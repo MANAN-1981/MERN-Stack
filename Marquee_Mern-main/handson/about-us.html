@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #111;
+    margin: 0;
+    padding: 24px 32px;
+    background: #ffffff;
+    max-width: 1100px;
+  }
+
+  table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .caption-text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-top: 8px;
+            color: #333;
+        }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 30px 0 12px 0;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+  }
+
+  .intro {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f0a04b 0%, #e05c8a 35%, #7b4fb0 70%, #4a3a9a 100%);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .avatar svg, .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .highlight {
+    background-color: #fbf000;
+    font-style: italic;
+  }
+
+  ul {
+    margin: 0 0 10px 0;
+    padding-left: 22px;
+  }
+
+  ol {
+    margin: 6px 0 14px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  ol li {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  ol li:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    color: #1a5fb4;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+
+  .social-bar {
+    display: inline-flex;
+    gap: 12px;
+    border: 3px solid #000;
+    padding: 10px;
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    background: #fff;
+    z-index: 100;
+  }
+
+  .social-bar a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .icon-x { background: #000; }
+  .icon-instagram {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+  .icon-facebook { background: #1877f2; }
+  .icon-whatsapp { background: #25d366; }
+
+  .social-bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+  <h1>About Me</h1>
+  <p class="intro">Welcome to my digital profile</p>
+
+  <div class="avatar">
+    <img src="https://www.facebook.com/photo/?fbid=127844523633227">
+  </div>
+
+  <h2>Hi, I'm a Developer &amp; Educator</h2>
+  <p>
+    I am a passionate professional dedicated to building impactful web applications and sharing my
+    knowledge with students around the world. Over the past few years, I have focused heavily on
+    mastering modern technologies to solve complex, real-world problems.
+  </p>
+  <p>
+    In my work, I always emphasize writing <strong>clean, maintainable code</strong> and focusing on
+    <span class="highlight">user-centric design</span>. Learning is a lifelong journey, and I make it a
+    priority to stay updated with the latest industry standards and engineering best practices.
+  </p>
+
+  <table>
+        <thead>
+            <tr>
+                <th colspan="4" class="text-center">Qualifications</th>
+            </tr>
+            <tr>
+                <th>Sno.</th>
+                <th>Name</th>
+                <th>Board</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bold-text">1</td>
+                <td>10th</td>
+                <td>CBSE</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td class="bold-text">2</td>
+                <td>12th</td>
+                <td>CBSE</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td class="bold-text">3</td>
+                <td>B.Tech</td>
+                <td>PU</td>
+                <td>A</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="caption-text">This table contains the educational records</div>
+
+  <h2>My Core Skills &amp; Focus Areas</h2>
+  <ul>
+    <li><strong>Frontend:</strong> Designing interactive user interfaces using modern structured components.
+      <ol>
+        <li><strong>HTML:</strong> HTML (HyperText Markup Language) is the skeleton of a webpage. It defines the content and structure using elements like headings, paragraphs, images, links, and buttons. For example, a simple HTML snippet:</li>
+        <li><strong>CSS:</strong> CSS (Cascading Style Sheets) is used to style and format HTML elements. It controls colors, fonts, spacing, layout, and overall visual appearance.</li>
+        <li><strong>Javascript:</strong> JavaScript is a scripting language that adds dynamic behavior to web pages. It allows the page to respond to user actions, such as clicks, form submissions, or animations. For example:</li>
+      </ol>
+    </li>
+    <li><strong>Backend:</strong> Creating reliable, secure, and highly scalable server architectures.</li>
+    <li><strong>Mentorship:</strong> Helping aspiring engineers transition into technical roles through hands-on practice.</li>
+  </ul>
+
+  <h2>Let's Connect</h2>
+  <p>
+    You can explore my open-source projects directly on my <a href="#">GitHub Profile</a>, or reach out to
+    me via email for collaborations at <a href="mailto:hello@example.com">hello@example.com</a>.
+  </p>
+
+  <div class="social-bar">
+    <a class="icon-x" href="#" aria-label="X">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/960px-X_logo.jpg" alt="x">
+    </a>
+    <a class="icon-instagram" href="#" aria-label="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/250px-Instagram_logo_2016.svg.png" alt="Instagram">
+    </a>
+    <a class="icon-facebook" href="#" aria-label="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/500px-Facebook_f_logo_%282019%29.svg.png" alt="facebook">
+    </a>
+    <a class="icon-whatsapp" href="#" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="#ffffff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.4c1.4.8 3.1 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.1c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.25-.13-1.5-.74-1.7-.82-.23-.08-.4-.13-.57.13-.17.25-.65.82-.8 1-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.37-.78-1.88-.2-.49-.42-.42-.57-.43h-.49c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.3 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.5-.61 1.71-1.2.21-.6.21-1.1.15-1.2-.06-.11-.23-.17-.48-.3z"/></svg>
+    </a>
+  </div>
+
+</body>
+</html>

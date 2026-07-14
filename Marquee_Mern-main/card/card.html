@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Our Clients Say</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .page-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 3.5rem 2rem 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #edf2f7;
+        }
+
+        .quote-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 75px;
+            height: 75px;
+            background-color: #2563eb;
+            border-bottom-left-radius: 100%;
+        }
+
+        .quote-icon::before {
+            content: "”";
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 5rem;
+            font-family: Georgia, serif;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            line-height: 1;
+        }
+
+        .card-header {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .name {
+            color: #1e3a8a;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .role {
+            color: #dc2626;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            color: #4b5563;
+            text-align: justify;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+
+
+
+        .whatsapp-btn {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+
+            width: 60px;
+            height: 60px;
+
+            background-color: #ffffff;
+            color: rgb(91, 255, 91);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            font-size: 35px;
+
+
+        }
+
+        .services-title {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 5rem 0 2.5rem 0;
+        }
+
+        .service-list {
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background-color: #ffffff;
+            border: 1px solid #edf2f7;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover .service-content h3,
+        .service-item:hover .service-content p,
+        .service-item:hover .icon-wrapper i {
+            color: #ff3030;
+        }
+
+
+        .service-content h3 {
+            color: #1e3a8a;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .service-content p {
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="page-wrapper">
+        <header class="section-header">
+            <h2>What Our Clients Say</h2>
+            <p>Read what our satisfied clients have to say about working with QASSERT</p>
+        </header>
+
+        <section class="testimonial-container">
+
+            <div class="testimonial-card">
+                <div class="quote-icon"></div>
+                <div class="card-header">
+                    <h3 class="name">John Miller</h3>
+                    <p class="role">Software Architect</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    QAssert provided exceptional software testing support, ensuring our product was released bug-free
+                    and on schedule. Their attention to detail and professional approach made them a great partner.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon"></div>
+                <div class="card-header">
+                    <h3 class="name">Samantha Turner</h3>
+                    <p class="role">Product Manager</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    "Working with QAssert was a great experience. Their team quickly identified critical issues,
+                    suggested improvements, and ensured our product met the highest quality standards. Highly
+                    recommended!"
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon"></div>
+                <div class="card-header">
+                    <h3 class="name">Michael Johnson</h3>
+                    <p class="role">Tech Lead</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    QAssert's thorough testing saved us time and resources. Their test reports were comprehensive and
+                    actionable, helping us maintain product quality. Looking forward to more collaborations!
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <h2 class="services-title">Our Services</h2>
+
+    <section class="service-list">
+        <section class="services-grid">
+
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Manual Testing</h3>
+                    <p>Comprehensive manual testing to ensure your software functions as intended.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Automated Testing</h3>
+                    <p>Efficient and reliable automated testing solutions to save time and resources.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="service-content">
+                    <h3>API Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-brands fa-android"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Mobile Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-brands fa-expeditedssl"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Security Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-universal-access"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Usability Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Performance Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-regular fa-address-card"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Accessibility Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Visual Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-code-compare"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Compatibility Testing</h3>
+                    <p>We help you deliver seamless and high-quality digital experiences by thoroughly evaluating your
+                        APIs.</p>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+</body>
+
+</html>
