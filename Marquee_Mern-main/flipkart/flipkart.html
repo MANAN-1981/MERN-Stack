@@ -1,223 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipkart Clone</title>
+    <title>Flipkart Header</title>
     <link rel="stylesheet" href="flipkart.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/fontawesome.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-light.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/duotone.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/light.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/brands.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-duotone-solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/chisel-regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/etch-solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/graphite-thin.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/jelly-regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/notdog-solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/slab-regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/thumbprint-light.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/utility-semibold.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/whiteboard-semibold.css" />
 </head>
-<body>
 
-    <!-- ===== TOP YELLOW BAR ===== -->
-    <header class="top-bar">
-        <div class="top-bar-inner">
-            <div class="top-tabs">
-                <a href="#" class="tab-pill flipkart-tab">
-                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/logo_lite-cbb357.png" alt="Flipkart" class="fk-logo">
-                </a>
-                <a href="#" class="tab-pill minutes-tab">
-                    <span class="tab-icon">🕐</span> Minutes
-                </a>
-                <a href="#" class="tab-pill travel-tab">
-                    <span class="tab-icon">✈️</span> Travel
-                </a>
-                <a href="#" class="tab-pill grocery-tab">
-                    <span class="tab-icon">🛒</span> Grocery
-                </a>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="nav-pills">
+                <button class="pill pill-flipkart">
+                    <img src="./assets/flipkart-logo.webp" alt="Flipkart Logo">
+                    Flipkart</button>
+                <button class="pill pill-travel">
+                    <img src="./assets/airplane.webp" alt="Travel">
+                    Travel</button>
             </div>
+
             <div class="top-right">
                 <div class="location">
-                    <span class="loc-icon">📍</span>
-                    <span class="loc-text">VRUNDALAY RESIDENCY TOWER D, E, F...</span>
+                    <span class="location-text">Chanakyapuri sector 6 noida , 20321</span>
                     <span class="chevron">›</span>
-                </div>
-                <div class="notif-badge">
-                    <span class="notif-icon">🔔</span>
-                    <span class="badge">0</span>
                 </div>
             </div>
         </div>
-    </header>
 
-    <!-- ===== SEARCH BAR ===== -->
-    <div class="search-section">
-        <div class="search-section-inner">
-            <div class="search-box">
-                <span class="search-icon">🔍</span>
+        <div class="header-middle">
+            <div class="search-bar">
                 <input type="text" placeholder="Search for Products, Brands and More">
             </div>
-            <div class="user-actions">
-                <a href="#" class="user-link">
-                    <span class="user-icon">👤</span> Manan <span class="chevron-sm">▾</span>
-                </a>
-                <a href="#" class="user-link">More <span class="chevron-sm">▾</span></a>
-                <a href="#" class="cart-link">
-                    <span class="cart-icon">🛒</span>
-                    <span class="cart-badge">1</span>
-                    Cart
-                </a>
+
+            <div class="bottom-right">
+                <div class="dropdown">
+                    Manan <span class="chevron">⌄</span>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fa-solid fa-headset"></i> My Profile</a>
+                        <a href="#"><i class="fa-solid fa-user-plus"></i> Orders</a>
+                        <a href="#"><i class="fa-solid fa-info-circle"></i> Whishlist</a>
+                        <a href="#"><i class="fa-solid fa-download"></i> Rewards</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    More <span class="chevron">⌄</span>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fa-solid fa-headset"></i> Notification Preferences</a>
+                        <a href="#"><i class="fa-solid fa-user-plus"></i> 24x7 Customer Care</a>
+                        <a href="#"><i class="fa-solid fa-info-circle"></i> Advertise</a>
+                        <a href="#"><i class="fa-solid fa-download"></i> Download App</a>
+                    </div>
+                </div>
+                <div class="cart">Cart <i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="item-topic">
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/all.svg" alt="For You">
+                    <p>For You</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/fashion.svg" alt="Fashion">
+                    <p>Fashion</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/mobiles.svg" alt="Men">
+                    <p>Men</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/electronics.svg" alt="Electronics">
+                    <p>Electronics</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/beauty.svg" alt="Beauty">
+                    <p>Beauty Products</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/auto-new.svg" alt="Two Wheeler">
+                    <p>Two Wheeler</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/toy.svg" alt="Toys">
+                    <p>Toys</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/auto-acc.svg" alt="Auto Accessories">
+                    <p>Auto Accessories</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/sport.svg" alt="Sports">
+                    <p>Sports</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/furniture.svg" alt="Furniture">
+                    <p>Furniture</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/books.svg" alt="Books">
+                    <p>Books</p>
+                </div>
+                <div class="item">
+                    <img src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/food.svg" alt="Food & Health">
+                    <p>Food & Health</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <section class="main-content">
+        <div class="main-offer">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/3200/720/image/6015c703748e7a42.jpg?q=60" alt="Offer 1">
+        </div>
+        <div class="listings-1">
+            <div class="listing-item">
+                <img src="./assets/listing1.webp" alt="Listing 1">
+            </div>
+            <div class="listing-item">
+                <img src="./assets/listing2.webp" alt="Listing 2">
+            </div>
+            <div class="listing-item">
+                <img src="./assets/listing3.webp" alt="Listing 3">
+            </div>
+        </div>
+    </section>
+
+    <div class="spotlight">
+        <br>
+        <h2 class="spotlight-title">Brands in Spotlight</h2>
+        <div class="spotlight-cards">
+            <div class="spotlight-card">
+                <div class="spotlight-img-wrap">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/760/1020/image/ccc9cebc4d2f45f8.png?q=60" alt="Mivi">
+                </div>
+            </div>
+
+            <div class="spotlight-card">
+                <div class="spotlight-img-wrap">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/760/1020/image/5df482e87b0087de.png?q=60" alt="Noise">
+                </div>
+            </div>
+
+            <div class="spotlight-card">
+                <div class="spotlight-img-wrap">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/760/1020/image/2f8b1bfec9ec5778.png?q=60" alt="realme TechLife">
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== CATEGORY NAV ===== -->
-    <nav class="category-nav">
-        <div class="category-nav-inner">
-            <a href="#" class="cat-item active">
-                <span class="cat-icon">🎁</span>
-                <span class="cat-label">For You</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">👗</span>
-                <span class="cat-label">Fashion</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">📱</span>
-                <span class="cat-label">Mobiles</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">💄</span>
-                <span class="cat-label">Beauty</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">💻</span>
-                <span class="cat-label">Electronics</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🏠</span>
-                <span class="cat-label">Home</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🔌</span>
-                <span class="cat-label">Appliances</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🧸</span>
-                <span class="cat-label">Toys, ba...</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🍔</span>
-                <span class="cat-label">Food & H...</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🚗</span>
-                <span class="cat-label">Auto Acc...</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🏍️</span>
-                <span class="cat-label">2 Wheele...</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">⚽</span>
-                <span class="cat-label">Sports &...</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">📚</span>
-                <span class="cat-label">Books &...</span>
-            </a>
-            <a href="#" class="cat-item">
-                <span class="cat-icon">🪑</span>
-                <span class="cat-label">Furniture</span>
-            </a>
-        </div>
-    </nav>
+    <br>
+    <br>
 
-    <!-- ===== BANNER / HERO SECTION ===== -->
-    <section class="banner-section">
-        <div class="banner-grid">
-            <div class="banner-card banner-minutes">
-                <div class="banner-overlay">
-                    <p class="banner-tag">Get everything in <strong>MINUTES</strong></p>
-                    <div class="banner-deal">
-                        <span class="deal-text">Deals from</span>
-                        <span class="deal-price">₹9</span>
-                    </div>
-                    <p class="banner-sub">₹0 Platform fee</p>
-                </div>
-            </div>
-            <div class="banner-card banner-boltt">
-                <div class="banner-overlay">
-                    <p class="banner-brand">boltt</p>
-                    <h2>The next power move</h2>
-                    <h3>Coming Soon</h3>
-                    <p class="banner-sub">From the world of FIRE BOLTT</p>
-                </div>
-            </div>
-            <div class="banner-card banner-nvidia">
-                <div class="banner-overlay">
-                    <p class="banner-brand">GEFORCE RTX</p>
-                    <h2>Coursework & gaming</h2>
-                    <h3>Shop now</h3>
-                    <p class="banner-sub">Student Recommended, RTX...</p>
-                </div>
-            </div>
+    <div class="show-case">
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/ee858d99a13873c5.jpg?q=60" alt="For Gen Z">
+            <p>For Gen Z</p>
         </div>
-        <!-- Dots -->
-        <div class="banner-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/18b53b87c4f53646.png?q=60" alt="Flipkart Plus">
+            <p>Flipkart Plus</p>
         </div>
-    </section>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/f17ba158f2573b9c.png?q=60" alt="Original">
+            <p>Original</p>
+        </div>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/5ec9725ee1bc6137.png?q=60" alt="Gift Card">
+            <p>Gift Card</p>
+        </div>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/f09f93eeb711050d.jpg?q=60" alt="Sell Phone">
+            <p>Sell Phone</p>
+        </div>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/83fdd6a7266c528c.jpg?q=60" alt="Plus">
+            <p>Plus</p>
+        </div>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/2146fd64b40ea493.jpg?q=60" alt="Super Coin">
+            <p>Super Coin</p>
+        </div>
+        <div class="show-case-item">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/136/136/image/7ee61384db3e3beb.jpg?q=60" alt="Next Gen">
+            <p>Next Gen</p>
+        </div>
+    </div>
 
-    <!-- ===== PRODUCT ROW: Still Looking ===== -->
-    <section class="product-section">
-        <div class="product-section-inner">
-            <h2 class="section-title">Manan, still looking for these?</h2>
-            <div class="product-row">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://placehold.co/150x150/f0f0f0/888?text=Earbuds" alt="True Wireless">
-                    </div>
-                    <p class="product-name">True Wireless</p>
-                    <a href="#" class="view-store">View Store</a>
+    <div class="footer-accordion">
+        <span>Flipkart - Your go-to place for Online Shopping</span>
+        <span class="plus">+</span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-col">
+                <h4>ABOUT</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Flipkart Stories</a>
+                <a href="#">Press</a>
+                <a href="#">Corporate Information</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>GROUP COMPANIES</h4>
+                <a href="#">Myntra</a>
+                <a href="#">Cleartrip</a>
+                <a href="#">Shopsy</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <a href="#">Payments</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation &amp; Returns</a>
+                <a href="#">FAQ</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>CONSUMER POLICY</h4>
+                <a href="#">Cancellation &amp; Returns</a>
+                <a href="#">Terms Of Use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Grievance Redressal</a>
+                <a href="#">EPR Compliance</a>
+                <a href="#">FSSAI Food Safety Connect App</a>
+            </div>
+
+            <div class="footer-col footer-address">
+                <h4 class="muted">Mail Us:</h4>
+                <p>
+                    Flipkart Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &amp;<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India
+                </p>
+                <h4 class="muted">Social:</h4>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://placehold.co/150x150/e8e0d8/555?text=Jeans" alt="Men's Jeans">
-                    </div>
-                    <p class="product-name">Men's Jeans</p>
-                    <a href="#" class="view-store">View Store</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://placehold.co/150x150/d4c5a9/555?text=Shoe+Rack" alt="Shoe Rack">
-                    </div>
-                    <p class="product-name">Shoe Rack</p>
-                    <a href="#" class="view-store">View Store</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-img chips-card">
-                        <img src="https://placehold.co/150x150/ffe0b2/d84315?text=Chips" alt="Chips & Snacks">
-                    </div>
-                    <p class="product-tag-11min">11 MINUTES</p>
-                    <p class="product-name">Chips & Snacks</p>
-                    <a href="#" class="view-store buy-again">Buy Again</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://placehold.co/150x150/e0e0e0/333?text=SSD" alt="Internal SSD">
-                    </div>
-                    <p class="product-name">Internal SSD</p>
-                    <a href="#" class="view-store">View Store</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://placehold.co/150x150/c8e6c9/2e7d32?text=Books" alt="Books">
-                    </div>
-                    <p class="product-name">Books</p>
-                    <a href="#" class="view-store">View Store</a>
-                </div>
-                <!-- Arrow -->
-                <button class="row-arrow">›</button>
+            </div>
+
+            <div class="footer-col footer-address">
+                <h4 class="muted">Registered Office Address:</h4>
+                <p>
+                    Flipkart Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &amp;<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India<br>
+                    CIN : U51109KA2012PTC066107<br>
+                    Telephone: <a href="tel:04445614700" class="tel-link">044-45614700</a> /
+                    <a href="tel:04467415800" class="tel-link">044-67415800</a>
+                </p>
             </div>
         </div>
-    </section>
 
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <span><i class="fa-solid fa-store"></i> Become a Seller</span>
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> Advertise</span>
+                <span><i class="fa-solid fa-gift"></i> Gift Cards</span>
+                <span><i class="fa-solid fa-circle-question"></i> Help Center</span>
+            </div>
+            <div class="footer-copyright">© 2007-2026 Flipkart.com</div>
+            <div class="footer-payments">
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/payment-method-69e7ec.svg" alt="Visa">
+               
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
