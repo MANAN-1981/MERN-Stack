@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Items-Alignment</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="box green box-left"></div>
+            <div class="box green box-top-mid"></div>
+            <div class="box red box-top-right"></div>
+  <div class="box yellow box-mid-left"></div>
+  <div class="box red box-mid-right"></div>
+  <div class="box green box-bottom-right"></div>
+  <div class="box red box-bottom-left"></div>
+  <div class="box yellow box-bottom-mid"></div>
+</div>
+</body>
+<style>
+    body {
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    
+    .grid-container {
+      display: grid;
+      width: 100%;
+      max-width: 900px;
+      height: 500px; 
+      
+      
+      grid-template-columns: 1.2fr 1fr 1fr 1.2fr; 
+      
+    
+      grid-template-rows: repeat(3, 1fr); 
+      
+      
+      gap: 10px; 
+    }
+    
+    
+    .green {
+      background-color: #5ebd47;
+    }
+    
+    .red {
+      background-color: #ea363b;
+    }
+    
+    .yellow {
+      background-color: #f7a823;
+    }
+    
+    
+    
+    .box-left {
+      grid-row: 1 / span 3;
+      grid-column: 1;
+    }
+    
+    .box-top-mid {
+      grid-row: 1;
+      grid-column: 2 / span 2;
+    }
+    
+    .box-bottom-right {
+      grid-row: 2 / span 2;
+      grid-column: 4;
+    }
+    
+    
+</style>
+</html>
+
+
+
+
+
+
