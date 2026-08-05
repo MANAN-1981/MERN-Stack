@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afghan Product - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #1e293b;
+            display: flex;
+            min-height: 100vh;
+             animation-name: buttonIconRotate;
+            animation-duration: 9s;
+            animation-iteration-count: 1;
+        }
+
+        .sidebar {
+            width: 22%;
+            background: #0f62fe;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 0;
+            flex-shrink: 0;
+             animation-name: buttonIconRotate;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .sidebar-header p {
+            font-size: 14px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            margin-top: 20px;
+            animation-name: buttonIconRotate;
+            animation-duration: 0.5s;
+            animation-iteration-count: 2;
+        }
+
+        .sidebar-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        
+        .sidebar-menu li a:hover {
+            background-color: rgba(255, 255, 255, 0.18);
+            color: white;
+            border-left: 4px solid white;
+            transition-duration: 0.6s;
+            transition-delay: 0.1s;
+            box-shadow: 0 10px 19px rgba(0, 0, 0, 0.12);
+        }
+
+        .sidebar-user {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .topbar {
+            font-size: 1em;
+            margin-bottom: 4%;
+            display: flex;
+            justify-items: row;
+            align-items: start;
+            justify-content: space-between;
+             animation-name: buttonIconRotate;
+            animation-duration: 6s;
+            animation-iteration-count: 2; 
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .topbar-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e0e7ff;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #0f62fe;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .icon-btn {
+            position: relative;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5%;
+             animation-name: buttonIconRotate;
+            animation-duration: 9s;
+            animation-iteration-count: 2;
+        }
+        .hero-stats-grid {
+            display: flex;
+            gap: 15px;
+        }
+        .welcome-hero {
+            background-color: #0f62fe;
+            padding: 2%;
+            border-radius: 8px;
+        }
+        .hero-stat-card {
+            background-color: #ffffff;
+            padding: 18px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+             animation-name: buttonIconRotate;
+            animation-duration: 9s;
+            animation-iteration-count: 2;
+            
+        }
+        .hero-stat-card .icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #e0e7ff;
+            color: #0f62fe;
+            font-size: 16px;
+            margin-bottom: 12px;
+             animation-name: buttonIconRotate;
+            animation-duration: 0.5s;
+            animation-iteration-count: 2;
+            
+        }
+        .hero-stat-card .label {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+        .hero-stat-card .value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+        .hero-stat-card .card-value {
+            font-size: 12px;
+            color: #10b981;
+            font-weight: 500;
+        }
+        .date-pill {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .hero-actions .btn {
+            background-color: #70a2ff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+            animation-name: borderSmooth;   
+            animation-duration: 0.5s;
+            animation-iteration-count: 2;
+            animation-name: buttonIconRotate;
+            animation-duration: 0.4s;
+            animation-iteration-count: 2; 
+        }
+
+        @keyframes borderSmooth {
+           from{
+            background-color: #fc9c9c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+           }
+           to{
+            background-color: #0008ff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           }
+        }
+        .hero-actions .fa-solid.fa-rotate-right {
+            margin-right: 5px;
+            animation-name: buttonIconRotate;
+            animation-duration: 0.4s;
+            animation-iteration-count: 2;
+        }
+        @keyframes buttonIconRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+            
+        }
+        .hero-actions .fa-solid.fa-download {
+            margin-right: 5px;
+            animation-name: buttonIconUpDown;
+            animation-duration: 1s;
+            animation-iteration-count: 2;
+        }
+        @keyframes buttonIconUpDown {
+            from {
+                transform: translateY(1px);
+            }
+            to {
+                transform: translateY(-15px);
+            }
+        }
+        .hero-actions .fa-solid.fa-rotate-right {
+            margin-right: 5px;
+            animation-name: buttonIconRotate;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes buttonIconRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+            
+        }
+        .hero-actions .btn:hover {
+            background-color: #060a0f;
+        }
+        .hero-header h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+        .hero-header p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1em;
+        }
+        
+        .stats-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 5%;
+
+        }
+        .stat-card {
+            background-color: white;
+            width: 23%;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+             animation-name: buttonIconRotate;
+            animation-duration: 7s;
+            animation-iteration-count: 2;
+        }
+        .stat-card .stat-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .stat-card .stat-icon {
+            font-size: 20px;
+        }
+        .stat-card .stat-growth {
+            font-size: 12px;
+            color: #10b981;
+            font-weight: 600;
+        }
+        .stat-card .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        .stat-card .stat-name {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+        .stat-card .progress-track {
+            width: 100%;
+            height: 6px;
+            background-color: #eef0f4;
+            border-radius: 10px;
+            margin-bottom: 6px;
+            overflow: hidden;
+        }
+        .stat-card .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+        }
+        .stat-card .stat-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        
+        .stat-card.users .stat-icon { color: #0f62fe; }
+        .stat-card.users .progress-fill { width: 75%; background-color: #0f62fe; }
+        
+        .stat-card.products .stat-icon { color: #14b8a6; }
+        .stat-card.products .progress-fill { width: 60%; background-color: #14b8a6; }
+        
+        .stat-card.orders .stat-icon { color: #f97316; }
+        .stat-card.orders .progress-fill { width: 83%; background-color: #f97316; }
+        
+        .stat-card.revenue .stat-icon { color: #8b5cf6; }
+        .stat-card.revenue .progress-fill { width: 90%; background-color: #8b5cf6; }
+
+        
+
+        .panels-grid {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 5%;
+            align-items: stretch;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .panel-header h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .panel-header p {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .panel-header .view-all {
+            font-size: 12px;
+            color: #0f62fe;
+            text-decoration: none;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .panel-tabs {
+            display: flex;
+            gap: 6px;
+            background-color: #f4f7fb;
+            padding: 3px;
+            border-radius: 6px;
+        }
+
+        .panel-tabs span {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #6b7280;
+            cursor: pointer;
+        }
+
+        .panel-tabs span.active {
+            background-color: #0f62fe;
+            color: white;
+        }
+
+        
+        .revenue-panel {
+            width: 62%;
+        }
+
+        .revenue-row {
+            margin-bottom: 16px;
+        }
+
+        .revenue-row-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .revenue-row-top .month {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .revenue-row-top .orders {
+            color: #9ca3af;
+            font-size: 12px;
+            margin-left: 6px;
+        }
+
+        .revenue-row-top .growth {
+            color: #10b981;
+            font-weight: 600;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+
+        .revenue-row-top .amount {
+            font-weight: 700;
+        }
+
+        .revenue-bar-track {
+            width: 100%;
+            height: 26px;
+            background-color: #eef0f4;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .revenue-bar-fill {
+            height: 100%;
+            background-color: #0f62fe;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding-right: 10px;
+             animation-name: barGrow;
+             animation-duration: 1.2s;
+             animation-iteration-count: 1;
+        }
+
+        @keyframes barGrow {
+            from { width: 0%; }
+        }
+
+        .revenue-summary {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .revenue-summary .mini-stat {
+            flex: 1;
+            background-color: #f4f7fb;
+            border-radius: 8px;
+            padding: 12px 14px;
+        }
+
+        .revenue-summary .mini-stat .mini-icon {
+            color: #0f62fe;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .revenue-summary .mini-stat .mini-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .revenue-summary .mini-stat .mini-label {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        
+        .activity-panel {
+            width: 38%;
+        }
+
+        .activity-panel .panel-header .live-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .activity-panel .panel-header .live-dot::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #10b981;
+             animation-name: pulseDot;
+             animation-duration: 1.2s;
+             animation-iteration-count: infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .activity-item {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eef0f4;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .activity-icon.order { background-color: #0f62fe; }
+        .activity-icon.user { background-color: #14b8a6; }
+        .activity-icon.product { background-color: #f97316; }
+        .activity-icon.review { background-color: #8b5cf6; }
+
+        .activity-text p {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .activity-text span.detail {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .activity-text span.time {
+            font-size: 11px;
+            color: #9ca3af;
+            display: block;
+            margin-top: 2px;
+        }
+
+        
+        .actions-sellers-grid {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 5%;
+            align-items: stretch;
+        }
+
+        .quick-actions-panel {
+            width: 38%;
+        }
+
+        .quick-actions-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .quick-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .quick-action-btn .qa-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .quick-action-btn .qa-title {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .quick-action-btn .qa-sub {
+            font-size: 11px;
+            opacity: 0.85;
+        }
+
+        .quick-action-btn.add-product { background-color: #0f62fe; }
+        .quick-action-btn.manage-users { background-color: #10b981; }
+        .quick-action-btn.view-reports { background-color: #f97316; }
+        .quick-action-btn.settings { background-color: #8b5cf6; }
+
+        .top-sellers-panel {
+            width: 62%;
+        }
+
+        .seller-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eef0f4;
+        }
+
+        .seller-item:last-child {
+            border-bottom: none;
+        }
+
+        .seller-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .seller-avatar.a { background-color: #0f62fe; }
+        .seller-avatar.b { background-color: #14b8a6; }
+        .seller-avatar.c { background-color: #f97316; }
+
+        .seller-info {
+            flex-grow: 1;
+        }
+
+        .seller-info p {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .seller-info span {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        .seller-right {
+            text-align: right;
+        }
+
+        .seller-right .seller-revenue {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .seller-right .seller-growth {
+            font-size: 11px;
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        
+        .pending-section {
+            margin-bottom: 3%;
+        }
+
+        .pending-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .pending-header h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .pending-header p {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .pending-badge {
+            background-color: #fee2e2;
+            color: #ef4444;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .pending-grid {
+            display: flex;
+            gap: 15px;
+        }
+
+        .pending-card {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-left: 4px solid transparent;
+        }
+
+        .pending-card.verifications { border-left-color: #f97316; }
+        .pending-card.approvals { border-left-color: #0f62fe; }
+        .pending-card.issues { border-left-color: #ef4444; }
+
+        .pending-card .pending-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .pending-card.verifications .pending-icon { background-color: #f97316; }
+        .pending-card.approvals .pending-icon { background-color: #0f62fe; }
+        .pending-card.issues .pending-icon { background-color: #ef4444; }
+
+        .pending-card .pending-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .pending-card .pending-sub {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .pending-card .pending-count {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ef4444;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div>
+            <div class="sidebar-header">
+                <h2>Afghan Product</h2>
+                <p>Admin Panel</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-border-all"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Orders</a></li>
+                <li><a href="#"><i class="fa-solid fa-layer-group"></i> Categories</a></li>
+                <li><a href="#"><i class="fa-solid fa-comment-dots"></i> Messages</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-user">
+            <div class="user-avatar">A</div>
+            <div class="user-info">
+                <h4>Admin User</h4>
+                <p>admin@afghan.com</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+    <header class="topbar">
+        <div class="page-title">
+            <h1>Dashboard</h1>
+            <p>Manage your dashboard here</p>
+        </div>
+        <div class="topbar-actions">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="icon-btn">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge-dot"></span>
+            </div>
+            <div class="user-avatar">A</div>
+        </div>
+    </header>
+
+    <section class="welcome-hero">
+        <div class="hero">
+        <div class="hero-header">
+            <h2>Welcome back , Admin <span class="date-pill">Wednesday, 12 April 2023</span></h2>
+            <p>Here's what's happening with your store today.</p>
+        </div>
+        <div class="hero-actions">
+            <button class="btn"><i class="fa-solid fa-download"></i> Export</button>
+            <button class="btn"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+        </div>
+        </div>
+        
+        <div class="hero-stats-grid">
+            <div class="hero-stat-card">
+                <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="label">Today's Orders</div>
+                <p class="value">1,234</p>
+                <p class="card-value">12.3% Orders Increased Today</p>
+            </div>
+            <div class="hero-stat-card">
+                <div class="icon"><i class="fa-solid fa-users"></i></div>
+                <div class="label">New Users</div>
+                <p class="value">567</p>
+                <p class="card-value">8.1% New Users Today</p>
+            </div>
+            <div class="hero-stat-card">
+                <div class="icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+                <div class="label">Revenue Today</div>
+                <p class="value">$12,345</p>
+                <p class="card-value">5.2% Revenue Increased Today</p>
+            </div>
+            <div class="hero-stat-card">
+                <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="label">Conversion Rate</div>
+                <p class="value">4.5%</p>
+                <p class="card-value">1.2% Conversion Rate Increased Today</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <section class="stats-grid">
+        <div class="stat-card users">
+            <div class="stat-top">
+                <i class="fa-solid fa-users stat-icon"></i>
+                <span class="stat-growth"><i class="fa-solid fa-arrow-up"></i> 16.5%</span>
+            </div>
+            <p class="stat-number">12,543</p>
+            <p class="stat-name">Total Users</p>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="stat-bottom">
+                <span>vs last month</span>
+                <span>11,989</span>
+            </div>
+        </div>
+
+        <div class="stat-card products">
+            <div class="stat-top">
+                <i class="fa-solid fa-cube stat-icon"></i>
+                <span class="stat-growth"><i class="fa-solid fa-arrow-up"></i> 22.7%</span>
+            </div>
+            <p class="stat-number">3,842</p>
+            <p class="stat-name">Total Products</p>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="stat-bottom">
+                <span>vs last month</span>
+                <span>3,137</span>
+            </div>
+        </div>
+
+        <div class="stat-card orders">
+            <div class="stat-top">
+                <i class="fa-solid fa-cart-shopping stat-icon"></i>
+                <span class="stat-growth"><i class="fa-solid fa-arrow-up"></i> 15.3%</span>
+            </div>
+            <p class="stat-number">9,238</p>
+            <p class="stat-name">Total Orders</p>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="stat-bottom">
+                <span>vs last month</span>
+                <span>8,012</span>
+            </div>
+        </div>
+
+        <div class="stat-card revenue">
+            <div class="stat-top">
+                <i class="fa-solid fa-dollar-sign stat-icon"></i>
+                <span class="stat-growth"><i class="fa-solid fa-arrow-up"></i> 33.5%</span>
+            </div>
+            <p class="stat-number">PKR 2.4M</p>
+            <p class="stat-name">Total Revenue</p>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="stat-bottom">
+                <span>vs last month</span>
+                <span>PKR 1.8M</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="panels-grid">
+        <div class="panel revenue-panel">
+            <div class="panel-header">
+                <div>
+                    <h3>Revenue Analytics</h3>
+                    <p>Comprehensive overview of performance metrics</p>
+                </div>
+                <div class="panel-tabs">
+                    <span class="active">This Month</span>
+                    <span>This Year</span>
+                </div>
+            </div>
+
+            <div class="revenue-row">
+                <div class="revenue-row-top">
+                    <span><span class="month">January</span> <span class="orders">&middot; 5,121 orders</span></span>
+                    <span><span class="growth">+12.5%</span><span class="amount">PKR 120K</span></span>
+                </div>
+                <div class="revenue-bar-track">
+                    <div class="revenue-bar-fill" style="width:60%;">60%</div>
+                </div>
+            </div>
+
+            <div class="revenue-row">
+                <div class="revenue-row-top">
+                    <span><span class="month">February</span> <span class="orders">&middot; 7,398 orders</span></span>
+                    <span><span class="growth">+22.3%</span><span class="amount">PKR 220K</span></span>
+                </div>
+                <div class="revenue-bar-track">
+                    <div class="revenue-bar-fill" style="width:75%;">75%</div>
+                </div>
+            </div>
+
+            <div class="revenue-row">
+                <div class="revenue-row-top">
+                    <span><span class="month">March</span> <span class="orders">&middot; 8,014 orders</span></span>
+                    <span><span class="growth">+18.7%</span><span class="amount">PKR 240K</span></span>
+                </div>
+                <div class="revenue-bar-track">
+                    <div class="revenue-bar-fill" style="width:80%;">80%</div>
+                </div>
+            </div>
+
+            <div class="revenue-summary">
+                <div class="mini-stat">
+                    <div class="mini-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+                    <p class="mini-value">PKR 640K</p>
+                    <p class="mini-label">Total Revenue</p>
+                </div>
+                <div class="mini-stat">
+                    <div class="mini-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <p class="mini-value">+18.5%</p>
+                    <p class="mini-label">Growth Rate</p>
+                </div>
+                <div class="mini-stat">
+                    <div class="mini-icon"><i class="fa-solid fa-receipt"></i></div>
+                    <p class="mini-value">PKR 213K</p>
+                    <p class="mini-label">Avg Order</p>
+                </div>
+                <div class="mini-stat">
+                    <div class="mini-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <p class="mini-value">3,022</p>
+                    <p class="mini-label">Total Orders</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel activity-panel">
+            <div class="panel-header">
+                <div>
+                    <h3>Live Activity</h3>
+                    <p>Real-time updates</p>
+                </div>
+                <span class="live-dot">Live</span>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon order"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="activity-text">
+                    <p>Ahmad Sherif placed a new order</p>
+                    <span class="detail">PKR 4,500</span>
+                    <span class="time">2 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon user"><i class="fa-solid fa-user-plus"></i></div>
+                <div class="activity-text">
+                    <p>Fatima Nazari registered as a seller</p>
+                    <span class="time">15 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon product"><i class="fa-solid fa-box"></i></div>
+                <div class="activity-text">
+                    <p>Hamid Karimi added a new product listing</p>
+                    <span class="time">32 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon review"><i class="fa-solid fa-star"></i></div>
+                <div class="activity-text">
+                    <p>Zain Ahmadi left a 5-star review</p>
+                    <span class="time">1 hour ago</span>
+                </div>
+            </div>
+
+            <a href="#" class="view-all" style="display:block; text-align:center; margin-top:10px;">View All Activities</a>
+        </div>
+    </section>
+
+    
+    <section class="actions-sellers-grid">
+        <div class="panel quick-actions-panel">
+            <div class="panel-header">
+                <div>
+                    <h3>Quick Actions</h3>
+                    <p>Frequently used admin tasks</p>
+                </div>
+            </div>
+            <div class="quick-actions-list">
+                <a href="#" class="quick-action-btn add-product">
+                    <div class="qa-icon"><i class="fa-solid fa-plus"></i></div>
+                    <div>
+                        <div class="qa-title">Add Product</div>
+                        <div class="qa-sub">Create new listing</div>
+                    </div>
+                </a>
+                <a href="#" class="quick-action-btn manage-users">
+                    <div class="qa-icon"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <div class="qa-title">Manage Users</div>
+                        <div class="qa-sub">View and edit users</div>
+                    </div>
+                </a>
+                <a href="#" class="quick-action-btn view-reports">
+                    <div class="qa-icon"><i class="fa-solid fa-chart-column"></i></div>
+                    <div>
+                        <div class="qa-title">View Reports</div>
+                        <div class="qa-sub">Analytics data</div>
+                    </div>
+                </a>
+                <a href="#" class="quick-action-btn settings">
+                    <div class="qa-icon"><i class="fa-solid fa-gear"></i></div>
+                    <div>
+                        <div class="qa-title">Settings</div>
+                        <div class="qa-sub">Configure system</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="panel top-sellers-panel">
+            <div class="panel-header">
+                <div>
+                    <h3>Top Sellers</h3>
+                    <p>Best performing products</p>
+                </div>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div class="seller-item">
+                <div class="seller-avatar a">KH</div>
+                <div class="seller-info">
+                    <p>Kabul Handicrafts</p>
+                    <span>1,245 sales &middot; +28.3%</span>
+                </div>
+                <div class="seller-right">
+                    <div class="seller-revenue">PKR 245K</div>
+                    <div class="seller-growth">Revenue</div>
+                </div>
+            </div>
+
+            <div class="seller-item">
+                <div class="seller-avatar b">AC</div>
+                <div class="seller-info">
+                    <p>Afghan Carpets Co.</p>
+                    <span>876 sales &middot; +19.2%</span>
+                </div>
+                <div class="seller-right">
+                    <div class="seller-revenue">PKR 198K</div>
+                    <div class="seller-growth">Revenue</div>
+                </div>
+            </div>
+
+            <div class="seller-item">
+                <div class="seller-avatar c">HT</div>
+                <div class="seller-info">
+                    <p>Herat Textiles</p>
+                    <span>624 sales &middot; +15.7%</span>
+                </div>
+                <div class="seller-right">
+                    <div class="seller-revenue">PKR 167K</div>
+                    <div class="seller-growth">Revenue</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="pending-section">
+        <div class="pending-header">
+            <div>
+                <h3>Pending Actions</h3>
+                <p>Items requiring your immediate attention</p>
+            </div>
+            <span class="pending-badge">28 Pending</span>
+        </div>
+
+        <div class="pending-grid">
+            <div class="pending-card verifications">
+                <div>
+                    <div class="pending-icon"><i class="fa-solid fa-id-card"></i></div>
+                    <p class="pending-title">Seller Verifications</p>
+                    <p class="pending-sub">New sellers waiting for approval</p>
+                </div>
+                <div class="pending-count">12</div>
+            </div>
+
+            <div class="pending-card approvals">
+                <div>
+                    <div class="pending-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <p class="pending-title">Product Approvals</p>
+                    <p class="pending-sub">Listings pending review</p>
+                </div>
+                <div class="pending-count">11</div>
+            </div>
+
+            <div class="pending-card issues">
+                <div>
+                    <div class="pending-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <p class="pending-title">Reported Issues</p>
+                    <p class="pending-sub">Urgent complaints and flagged content</p>
+                </div>
+                <div class="pending-count">5</div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+</body>
+
+</html>
