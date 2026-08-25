@@ -1,0 +1,43 @@
+section{
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.blue-menu-bar {    
+    background-color: #007bff;
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main-white-box {
+    background-color: #ff2121;
+    width: 80%;
+    height: 100vh;
+}
+
+.menu-content{
+    padding: 20px;
+    color: white;
+}
+.Logout-button {
+    padding: 20px;
+    color: white;
+}
+
+.product {
+   color: yellow;
+   display: flex;
+   flex-direction: column;
+}
+
+.product h1 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.product p {
+    margin: 0;
+    font-size: 0.9em;
+}
